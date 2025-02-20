@@ -24,6 +24,6 @@ void printMatriz(int *mat, int lin, int col) {
         for(int j = 0; j < col; ++j) {
             printf("%d ", mat[(i*col)+j]);
         }
-        printf("\n");
+        printf("\n\n");
     }
 }
