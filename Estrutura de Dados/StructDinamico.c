@@ -22,7 +22,7 @@ int main() {
 }
 
 void lerRegistro(struct Registros *rgt) {
-    printf("Noome: ");
+    printf("Nome: ");
     fgets(rgt->nome, QTD_NOME, stdin);
     printf("Cidade: ");
     fgets(rgt->cidade, QTD_CIDADE, stdin);
