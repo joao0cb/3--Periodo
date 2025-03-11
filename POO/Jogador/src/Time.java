@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Time {
-    private String nome;
+    // private String nome;
     private Jogador[] jogador = new Jogador[3];
 
     public void setTime() {
