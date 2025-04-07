@@ -73,3 +73,22 @@ void imprimirVetor(int v[], int tam) {
 		printf("%d\t", v[i]);
 	}
 }
+
+void concatena_pilha(Pilha* p1, Pilha* p2) {
+	while(p2->inicio != NULL) {
+		No* novo_no = criar_no(p2->inicio->dado);
+		novo_no->prox = p1->inicio;
+		p1->inicio = novo_no;
+
+		No* temp = p2->inicio;
+		p2->inicio = p2->inicio->prox;
+		free(temp);
+	}
+}
+
+void concatena_pilhas(Pilha* p1, Pilha* p2) {
+	while(p2->inicio != NULL) {
+		empilhar(p1, top(p2));
+		desempilhar(p2);
+	}
+}
