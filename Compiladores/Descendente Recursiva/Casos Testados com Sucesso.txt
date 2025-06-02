@@ -1,0 +1,21 @@
+Casos Testados com Sucesso
+
+['int', 'ID', ';']
+['float', 'ID', '[', 'NUM_INT', ']', ';']
+['int', 'ID', '=', 'NUM_INT', ';']
+['char', 'ID', '=', 'TEXTO', ';']
+['float', 'ID', '(', 'int', 'ID', ',', 'float', 'ID', ')', '{', '}']
+['int', 'ID', '=', '{', 'NUM_INT', ',', 'NUM_INT', '}', ';']
+['//', 'qualquer', 'coisa', 'NEWLINE']
+['if', '(', 'ID', ')', '{', 'int', 'ID', ';', '}', 'else', '{', 'float', 'ID', ';', '}']
+['switch', '(', 'ID', ')', 'case', 'NUM_INT', ':', '{', 'break', ';', '}', 'default', ':', '{', 'break', ';', '}']
+['return', 'ID', ';']
+
+
+
+Casos de Erros Detectados Corretamente
+
+['int', 'ID']  → SyntaxError: Esperando ';'
+['int', '=', 'NUM_INT', ';'] → SyntaxError: Esperando ID
+['float', 'ID', '[', 'NUM_INT', ';'] → SyntaxError: Esperando ']'
+['int', 'ID', '=', 'NUM_INT', ',', 'NUM_INT', '}', ';']
